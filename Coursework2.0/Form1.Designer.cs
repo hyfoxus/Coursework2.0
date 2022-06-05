@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.funcBox = new System.Windows.Forms.TextBox();
             this.leftBox = new System.Windows.Forms.TextBox();
@@ -62,6 +62,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.maxBox = new System.Windows.Forms.TextBox();
+            this.minBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,18 +133,18 @@
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
             this.chart1.Location = new System.Drawing.Point(1007, 33);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series2.Color = System.Drawing.Color.Navy;
-            series2.Legend = "Legend1";
-            series2.Name = "f(x)";
-            this.chart1.Series.Add(series2);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series4.Color = System.Drawing.Color.Navy;
+            series4.Legend = "Legend1";
+            series4.Name = "f(x)";
+            this.chart1.Series.Add(series4);
             this.chart1.Size = new System.Drawing.Size(725, 535);
             this.chart1.TabIndex = 7;
             this.chart1.Text = "chart1";
@@ -350,11 +352,31 @@
             this.label7.TabIndex = 33;
             this.label7.Text = "Dot size";
             // 
+            // maxBox
+            // 
+            this.maxBox.Location = new System.Drawing.Point(1561, 638);
+            this.maxBox.Name = "maxBox";
+            this.maxBox.Size = new System.Drawing.Size(122, 31);
+            this.maxBox.TabIndex = 34;
+            this.maxBox.TextChanged += new System.EventHandler(this.maxBox_TextChanged);
+            this.maxBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.maxBox_KeyDown);
+            // 
+            // minBox
+            // 
+            this.minBox.Location = new System.Drawing.Point(1561, 587);
+            this.minBox.Name = "minBox";
+            this.minBox.Size = new System.Drawing.Size(122, 31);
+            this.minBox.TabIndex = 35;
+            this.minBox.TextChanged += new System.EventHandler(this.minBox_TextChanged);
+            this.minBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.minBox_KeyDown);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1782, 862);
+            this.Controls.Add(this.minBox);
+            this.Controls.Add(this.maxBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -425,6 +447,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox maxBox;
+        private System.Windows.Forms.TextBox minBox;
     }
 }
 

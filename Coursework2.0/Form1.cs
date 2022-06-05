@@ -125,9 +125,12 @@ namespace Coursework2._0
 
         }
 
+
+        Axis aY = new Axis();
+       
         private void graphbtn_Click(object sender, EventArgs e)
         {
-
+            
             string func = "f(x) = " + funcBox.Text;
             double step = 0.1;
             try
@@ -193,6 +196,44 @@ namespace Coursework2._0
 
         }
 
+        private void minBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maxBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maxBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                try{
+                    aY.Maximum = Convert.ToDouble(maxBox.Text);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Ны тыкай Enter, если ничего не ввел");
+                }
+            }
+        }
+
+        private void minBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                try
+                {
+                    aY.Minimum = Convert.ToDouble(maxBox.Text);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ны тыкай Enter, если ничего не ввел");
+                }
+            }
+        }
     }
 }
 
