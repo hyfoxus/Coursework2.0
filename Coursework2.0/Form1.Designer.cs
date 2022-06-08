@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.funcBox = new System.Windows.Forms.TextBox();
             this.leftBox = new System.Windows.Forms.TextBox();
@@ -64,6 +64,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.maxBox = new System.Windows.Forms.TextBox();
             this.minBox = new System.Windows.Forms.TextBox();
+            this.minCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,18 +134,18 @@
             // 
             // chart1
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(1007, 33);
             this.chart1.Name = "chart1";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series4.Color = System.Drawing.Color.Navy;
-            series4.Legend = "Legend1";
-            series4.Name = "f(x)";
-            this.chart1.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series1.Color = System.Drawing.Color.Navy;
+            series1.Legend = "Legend1";
+            series1.Name = "f(x)";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(725, 535);
             this.chart1.TabIndex = 7;
             this.chart1.Text = "chart1";
@@ -370,11 +371,25 @@
             this.minBox.TextChanged += new System.EventHandler(this.minBox_TextChanged);
             this.minBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.minBox_KeyDown);
             // 
+            // minCheckBox
+            // 
+            this.minCheckBox.AutoSize = true;
+            this.minCheckBox.Checked = true;
+            this.minCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.minCheckBox.Location = new System.Drawing.Point(151, 640);
+            this.minCheckBox.Name = "minCheckBox";
+            this.minCheckBox.Size = new System.Drawing.Size(189, 29);
+            this.minCheckBox.TabIndex = 36;
+            this.minCheckBox.Text = "Find minimum?";
+            this.minCheckBox.UseVisualStyleBackColor = true;
+            this.minCheckBox.CheckedChanged += new System.EventHandler(this.minCheckBox_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1782, 862);
+            this.Controls.Add(this.minCheckBox);
             this.Controls.Add(this.minBox);
             this.Controls.Add(this.maxBox);
             this.Controls.Add(this.label7);
@@ -449,6 +464,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox maxBox;
         private System.Windows.Forms.TextBox minBox;
+        private System.Windows.Forms.CheckBox minCheckBox;
     }
 }
 

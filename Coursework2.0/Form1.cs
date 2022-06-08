@@ -59,7 +59,7 @@ namespace Coursework2._0
             double a = Convert.ToDouble(leftBox.Text);
 
             string path = filePathBox.Text + "\\" + fileNameBox.Text + ".txt";
-            MessageBox.Show(Methods.Fib(true, func, a, b, epsilon, path).ToString());
+            MessageBox.Show(Methods.Fib(minCheckBox.Checked, func, a, b, epsilon, path).ToString());
 
         }
 
@@ -233,6 +233,11 @@ namespace Coursework2._0
                     MessageBox.Show("Ны тыкай Enter, если ничего не ввел");
                 }
             }
+        }
+
+        private void minCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
